@@ -1,76 +1,73 @@
 import React from 'react';
 import {
   SafeAreaView,
-  View,
-  Text,
   Image,
   StyleSheet,
-  TextInput,
-  TouchableOpacity,
+  ScrollView,
+  View,
+  Text,
+  StatusBar, TextInput, TouchableOpacity,textContentType,
 } from 'react-native';
-
-const App = () => {
+const App = () =>  {
   return (
-    <SafeAreaView style={{flex: 1}}>
+    <SafeAreaView style={{flex:1}}>
       <View style={styles.container}>
-      <Image
-        source = {require('./images/shopping.png')}
-        style={{width: 250, height: 250, marginLeft: 70, marginBottom: 70}}/>
-        <View>
-          <TextInput style={styles.inputContainer}
-            keyboardType="email-address"
-            placeholder="E-posta giriniz.."
-          />
-          <TextInput style={styles.inputContainer}
-            keyboardType="email-address"
-            placeholder="Şifregiriniz.."
-          />
+        <View style={styles.imageContainer}>
+        <Image source={require("./images/shopping.png")}
+        style={{width:150,height:150}}/>
         </View>
-
-        <TouchableOpacity style={styles.buttonContainer}>
-          <Text style={styles.textStyle}>Giriş Yap</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity style={styles.buttonContainer}>
-          <Text style={styles.textStyle}>Kayıt Ol</Text>
-        </TouchableOpacity>
-
+        <View style={{}}>
+        <TextInput style={styles.InputContainer} placeholderTextColor={'gray'} placeholder="Eposta giriniz" keyboardType="email-address"/>
+        <TextInput style={styles.InputContainer} placeholderTextColor={'gray'} secureTextEntry={true} placeholder="Sifre giriniz" keyboardType="number-pad"/>
+        </View>
+        <View style={{alignItems:"center",marginTop:10}}>
+          <TouchableOpacity style={styles.ButtonContainer}>
+            <Text style={styles.textContainer}>Giris Yap</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.ButtonContainer}>
+            <Text style={styles.textContainer}>Kayıt ol</Text>
+          </TouchableOpacity>
+        </View>
       </View>
     </SafeAreaView>
   );
 };
-
-export default App;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#80CBC4',
-    justifyContent: 'center'
+const styles=StyleSheet.create({
+  container:{
+    flex:1,
+    backgroundColor:"#80CBC4",
+    // justifyContent:"center",
   },
-  inputContainer: {
-    backgroundColor: 'white',
-    padding: 10,
-    margin: 5,
-    borderColor: 'gray',
-    borderWidth: 1,
-    borderRadius: 10,
+  InputContainer:{
+    padding:15,
+    marginRight:15,
+    marginLeft:15,
+    marginTop:35,
+    borderRadius:10,
+    borderWidth:1,
+    backgroundColor:"white",  
+    fontSize:15,
+    fontFamily:"Roboto",
+    borderColor:"white"
   },
-  buttonContainer: {
-    width: 250,
-    backgroundColor: '#546E7A', 
-    padding: 10,
-    margin: 5,
-    marginTop: 10,
-    borderRadius: 5,
-    alignItems: 'center'
+  ButtonContainer:{
+    backgroundColor:"#546E7A",
+    margin:10,
+    borderRadius:5,
+    textAlign:"center",
+    padding:15,
   },
-  textStyle: {
-    fontSize: 17,
-    color: 'white',
-    fontWeight: 'bold',
-    textAlign: 'center',
-    alignSelf: 'center'
+  imageContainer:{
+    justifyContent:"center",
+    alignItems:"center",
+    marginBottom:20,
+    marginTop:80
+  },
+  textContainer:{
+    color:"white",
+    textAlign:"center",
+    fontWeight:"bold",
+    width:180,
   }
 });
-
+export default App;
