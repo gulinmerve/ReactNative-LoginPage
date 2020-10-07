@@ -1,4 +1,4 @@
 # ReactNative-LoginPage
 ReactNative
 
-![screenshot](./src/images/MyProject.PNG)
+![screenshot](./src/images/MyProject.png)
