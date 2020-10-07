@@ -17,7 +17,7 @@ const App = () =>  {
         style={{width:150,height:150}}/>
         </View>
         <View style={{}}>
-        <TextInput style={styles.InputContainer} placeholderTextColor={'gray'} placeholder="Eposta giriniz" keyboardType="email-address"/>
+        <TextInput style={styles.InputContainer} placeholderTextColor={'gray'} placeholder="E-posta giriniz.." keyboardType="email-address"/>
         <TextInput style={styles.InputContainer} placeholderTextColor={'gray'} secureTextEntry={true} placeholder="Sifre giriniz" keyboardType="number-pad"/>
         </View>
         <View style={{alignItems:"center",marginTop:10}}>
@@ -47,7 +47,7 @@ const styles=StyleSheet.create({
     borderWidth:1,
     backgroundColor:"white",  
     fontSize:15,
-    fontFamily:"Roboto",
+    fontFamily:"Arial",
     borderColor:"white"
   },
   ButtonContainer:{
